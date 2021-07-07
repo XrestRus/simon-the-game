@@ -29,7 +29,9 @@
         },
 
         created() {
-            this.sound = new Audio(this.audio);
+            let audionPath = require(`@/assets/sounds/${ this.audio }`);
+
+            this.sound = new Audio(audionPath);
             this.sound.crossOrigin="anonymous";
         },
 
